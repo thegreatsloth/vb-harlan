@@ -1,0 +1,107 @@
+{exp:channel:entries channel="47_building_calculator" require_entry="yes"}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>One Harlan County Dynamic Building Calculator</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap"
+      rel="stylesheet"
+    />
+    <link type="text/css" rel="stylesheet" href="assets/css/one-harlan.css" />
+  </head>
+  <body>
+    <div class="overlay" id="overlay">
+      <div class="img-popup">
+        <div class="close-popup">
+          <span id="closeBtn" onclick="closePopup();">CLOSE</span>
+        </div>
+        <div class="img-container">
+          <img class="arrow" id="arrowBack" src="assets/img/arrows-left.png" />
+          <img class="overlay-img" src="" alt="" />
+          <img class="arrow" id="arrowNext" src="assets/img/arrows-right.png" />
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row pt-2">
+        <div class="col-12 " id="contentCol">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-4" id="logo">
+                <img
+                  src="assets/img/harlan-county-logo.png"
+                  alt="One Harlan County Logo"
+                />
+              </div>
+              <div class="col-md-8" id="titleContainer">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-12 mt-auto mb-auto">
+                      <h1 id="pageTitle">
+                        Dynamic Building Calculator<br />One Harlan County
+                      </h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- used to insert the buttons BEFORE -->
+          <div id="target"></div>
+        </div>
+        <div class="col-12 col-md-6 pt-3 mt-3" id="formCol">
+          <span class="underline budget">Esitmated Budget</span>
+          <p class="price dollars">$<span id="price"></span></p>
+          <span class="underline months">Time to Build</span>
+          <p class="timeline"><span id="timeline"></span> Months</p>
+
+          <form id="buildingPlans"></form>
+        </div>
+        <div
+          class="col-12 col-md-6 mb-auto mt-auto pt-3 pb-3"
+          id="imgSwapOuter"
+        >
+          <p id="buildingName"></p>
+          <img id="mainImg" src="assets/img/52500-harlan-render1.png" />
+          <div class="container" id="imgSwap">
+            <div class="row">
+              <div class="col-12 pt-2 pb-2 mb-3">
+                <div class="container">
+                  <div class="row" id="imgSwapInner"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="assets/js/one-harlan.js"></script>
+
+    {/exp:channel:entries}
+  </body>
+</html>
